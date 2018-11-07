@@ -1,0 +1,18 @@
+{% extends 'LogApp/base.html'%}
+{%block title%}
+Log In
+{%endblock %}
+
+{%block body%}
+<div class="jumbotron">
+  <form  method="post">
+    {%csrf_token%}
+    <label for="username" class="form-control">Username:</label>
+    <input  type="text" name="username" placeholder="Enter username">
+    <label for="password" class="form-control">Password::</label>
+    <input  type="password" name="password" >
+    <input type="submit" class="btn btn-success"  value="Login">
+
+  </form>
+</div>
+{%endblock %}
